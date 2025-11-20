@@ -1,3 +1,41 @@
-<h1>
-    Hello World!
-</h1>
+<body>
+    <div class="login">
+        <h1>California House Price Prediction</h1>
+
+        <form method="POST" action="/predict">
+            <label for="MedInc">Median Income (MedInc):</label>
+            <input type="number" id="MedInc" name="MedInc" placeholder="MedInc" step="0.01" required>
+            <small> (e.g., 5.0 for $50,000)</small><br><br>
+
+            <label for="HouseAge">Median House Age (HouseAge):</label>
+            <input type="number" id="HouseAge" name="HouseAge" placeholder="HouseAge" required><br><br>
+
+            <label for="AveRooms">Avg Rooms per Household (AveRooms):</label>
+            <input type="number" id="AveRooms" name="AveRooms" placeholder="AveRooms" step="0.01" required><br><br>
+
+            <label for="AveBedrms">Avg Bedrooms per Household (AveBedrms):</label>
+            <input type="number" id="AveBedrms" name="AveBedrms" placeholder="AveBedrms" step="0.01" required><br><br>
+
+            <label for="Population">Total Population (Population):</label>
+            <input type="number" id="Population" name="Population" placeholder="Population" required><br><br>
+
+            <label label for="AveOccup">Avg Household Occupancy (AveOccup):</label>
+            <input type="number" id="AveOccup" name="AveOccup" placeholder="AveOccup" step="0.01" required><br><br>
+
+            <label for="Latitude">Latitude:</label>
+            <input type="number" id="Latitude" name="Latitude" placeholder="Latitude" step="0.0001" required><br><br>
+
+            <label for="Longitude">Longitude:</label>
+            <input type="number" id="Longitude" name="Longitude" placeholder="Longitude" step="0.0001" required>
+            <small> (Use negative values for West)</small><br><br>
+
+            <button type="submit">Predict House Value</button>
+        </form>
+
+        <br>
+        <br>
+
+
+    </div>
+    {{prediction_text}}
+</body>
