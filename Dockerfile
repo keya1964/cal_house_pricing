@@ -1,6 +1,11 @@
 FROM python:3.7
-COPY . /app     
-WORKDIR /app    # Setting working directory to /app
-RUN pip3 install -r requirements.txt     # Installing dependencies
-EXPOSE $PORT 
-CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app   # Starting the application with Gunicorn
+
+WORKDIR /      
+
+COPY . .       
+
+RUN pip3 install -r requirements.txt
+
+EXPOSE $PORT
+
+CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
